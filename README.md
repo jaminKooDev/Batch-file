@@ -2,7 +2,7 @@
 Windows Batch File
 
 ## explorerStartpage.bat
-- Internet Explorer의 시작페이지를 https://www.naver.com 으로 설정한다.
+- 실행시 Internet Explorer의 시작페이지를 https://www.naver.com 으로 설정한다.
 ```
 + reg add "HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main" /v "Start Page" /t "REG_SZ" /d "https://www.naver.com/" /f
 ```
