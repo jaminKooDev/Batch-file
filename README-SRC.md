@@ -28,3 +28,11 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\S
 [참고(네이버블로그)](http://blog.naver.com/PostView.nhn?blogId=mjnms&logNo=220466734443&proxyReferer=https:%2F%2Fwww.google.com%2F)
 ,
 [참고(마이크로소프트 문서)](https://docs.microsoft.com/ko-kr/windows/security/identity-protection/user-account-control/user-account-control-group-policy-and-registry-key-settings#user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode)
+
+### 폴더옵션 설정
+
+```bash
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowFrequent" /t "REG_DWORD" /d "0" /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer" /v "ShowRecent" /t "REG_DWORD" /d "0" /f
+```
+- 즐겨찾기에서 최근에 사용한 폴더/파일 옵션 비활성화 : 0, 활성화 : 1
